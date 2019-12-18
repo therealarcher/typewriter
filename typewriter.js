@@ -10,15 +10,15 @@ const sentence = "hello there from lighthouse labs";
 // console.log();
 
 let newTime = 50;
-for (let char = 0; char < sentence.length; char++) {
-  if (char !== sentence.length - 1) {
+for (let char = 0; char <= sentence.length; char++) {
+  if (char < sentence.length) {
     setTimeout(() => {
-      process.stdout.write(sentence[char])}, newTime
-    )
+      process.stdout.write(sentence[char]);
+    }, newTime);
     newTime += 50;
-  }
-  else {
+  } else {
     setTimeout(() => {
-      console.log()}, newTime + 50)
-    }
-};
+      console.log();
+    }, newTime + 50);
+  }
+}
